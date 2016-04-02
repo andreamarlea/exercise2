@@ -1,9 +1,9 @@
 #Exercise2 Instructions
 
-###To run the application, you must first clone the tweetwordcount. 
-####This folder has the relevant topology, spout, and bolts.
+######To run the application, you must first clone the tweetwordcount. 
+######This folder has the relevant topology, spout, and bolts.
 
-####Before running, we start mount our volume so that we can store our data
+######Before running, we start mount our volume so that we can store our data
 # If you haven't already, find the location of your volume and mount it 
 #fdisk -l 
 #mount the volume
