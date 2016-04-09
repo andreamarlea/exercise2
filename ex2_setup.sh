@@ -1,5 +1,7 @@
 #To run the application, you must first clone the tweetwordcount. 
 #This folder has the relevant topology, spout, and bolts.
+#Please note that the file has been named tweetwordcount instead of ex2tweetwordcount 
+#due to potential hiccups with numeric values in the file name.
 
 #Before running, we start mount our volume so that we can store our data
 # If you haven't already, find the location of your volume and mount it 
@@ -15,19 +17,19 @@ sh start_postgres.sh
 psql -U postgres
 
 #DB Creation in Postgres (Once it has been started)
-# CREATE DATABASE tcount;
+CREATE DATABASE tcount;
 
 #Connect to DB
-# \c tcount
+\c tcount
 
 #Create table
-# CREATE TABLE tweetwordcount
-#       (word TEXT PRIMARY KEY NOT NULL,
-#       count INT NOT NULL);
+ CREATE TABLE tweetwordcount
+       (word TEXT PRIMARY KEY NOT NULL,
+       count INT NOT NULL);
 
 #Quit Psql
-# \q 
+ \q 
 
-#Change directory and RUN TWEETWORDCOUNT! Party time!
+#Change directory and RUN TWEETWORDCOUNT! Party time! 
 cd /root/ex2/tweetwordcount
 sparse run
