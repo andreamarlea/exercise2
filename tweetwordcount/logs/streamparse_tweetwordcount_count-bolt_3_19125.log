@@ -1,0 +1,12 @@
+2016-04-02 05:30:30,546 - streamparse.storm.component - ERROR - Exception in WordCounter.run()
+Traceback (most recent call last):
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/storm/component.py", line 489, in run
+    self._run()
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/storm/bolt.py", line 219, in _run
+    self.process(tup)
+  File "bolts/wordcount.py", line 25, in process
+    cur.execute("insert into tweetwordcount (word,count) \ select %s, 0 where not exists (select word from tweetwordcount where word = %s)", (word,word));
+ProgrammingError: syntax error at or near "\"
+LINE 1: insert into tweetwordcount (word,count) \ select E'sorry', 0...
+                                                ^
+
