@@ -10,6 +10,8 @@
 #mount /dev/xvdf /data
 #cd /data
 
+#Additionally, there is a twittercredentials.py file that needs twitter authentication credentials.
+
 #Let's now make a postgres database to store the data.
 
 #Start Postgres
